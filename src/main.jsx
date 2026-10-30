@@ -73,6 +73,13 @@ const githubProjects = [
   },
 ];
 
+const workflowSteps = [
+  ['01', 'Understand', 'Turn the product problem into a clear user flow, technical boundary, and definition of done.'],
+  ['02', 'Design', 'Shape the data model, permissions, integration seams, and interface before complexity spreads.'],
+  ['03', 'Build with leverage', 'Use Claude Code and OpenAI Codex for exploration, refactoring, tests, and documentation - with manual review.'],
+  ['04', 'Validate and ship', 'Prove the behavior with focused tests, browser checks, and a clean handoff that the next engineer can trust.'],
+];
+
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [darkMode, setDarkMode] = React.useState(() => window.localStorage.getItem('nainil-theme') === 'dark');
@@ -86,6 +93,7 @@ function App() {
 
   return (
     <div className={darkMode ? 'site-shell dark-theme' : 'site-shell'}>
+      <a className="skip-link" href="#top">Skip to content</a>
       <header className="topbar">
         <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Nainil Oza home">
           <span className="wordmark-mark">N</span>
@@ -106,7 +114,7 @@ function App() {
         </button>
       </header>
 
-      <main id="top">
+      <main id="top" tabIndex="-1">
         <section className="hero section-wrap">
           <div className="hero-copy reveal">
             <p className="eyebrow"><span className="live-dot" /> Available for thoughtful product teams</p>
@@ -177,7 +185,14 @@ function App() {
           <div className="about-aside reveal delay-1"><p className="aside-label">CURRENTLY EXPLORING</p><p>How AI-assisted development can make engineering teams faster without making the thinking shallower.</p><div className="aside-rule" /><p className="aside-label">WORKING LANGUAGES</p><p>English · Hindi · Gujarati</p></div>
         </section>
 
-        <section className="contact section-wrap" id="contact"><div className="contact-line" /><p className="section-kicker">04 / NEXT MOVE</p><h2>Have a hard problem<br /><em>worth solving?</em></h2><a className="contact-link" href="mailto:nainiloza1412@gmail.com">nainiloza1412@gmail.com <ArrowUpRight size={28} /></a></section>
+        <section className="workflow section-wrap" id="workflow">
+          <div className="workflow-heading reveal"><p className="section-kicker">04 / HOW I WORK</p><h2>From ambiguity<br /><span>to shipped.</span></h2><p className="section-intro">The tools change. The discipline stays: make the problem smaller, make the system clearer, and leave evidence behind.</p></div>
+          <div className="workflow-list reveal delay-1">
+            {workflowSteps.map(([number, title, description]) => <div className="workflow-step" key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></div>)}
+          </div>
+        </section>
+
+        <section className="contact section-wrap" id="contact"><div className="contact-line" /><p className="section-kicker">05 / NEXT MOVE</p><h2>Have a hard problem<br /><em>worth solving?</em></h2><a className="contact-link" href="mailto:nainiloza1412@gmail.com">nainiloza1412@gmail.com <ArrowUpRight size={28} /></a></section>
       </main>
 
       <footer className="footer section-wrap"><span>© {new Date().getFullYear()} Nainil Oza</span><span>Built with care · Designed for clarity</span><div className="socials"><a href="https://github.com/Nainil1412" aria-label="GitHub">GitHub</a><a href="https://linkedin.com/in/nainiloza" aria-label="LinkedIn">LinkedIn</a><a href="mailto:nainiloza1412@gmail.com" aria-label="Email"><Mail size={18} /></a></div></footer>

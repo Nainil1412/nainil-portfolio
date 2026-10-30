@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nainil-oza.vercel.app/sitemap.xml
