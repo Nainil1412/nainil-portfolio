@@ -122,7 +122,7 @@ function App() {
     <div className={darkMode ? 'site-shell dark-theme' : 'site-shell'}>
       <a className="skip-link" href="#top">Skip to content</a>
       <header className="topbar">
-        <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Nainil Oza home">
+        <a className="wordmark" href="#top" onClick={closeMenu}>
           <span className="wordmark-mark">N</span>
           <span>NAINIL OZA</span>
         </a>
