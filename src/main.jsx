@@ -202,7 +202,7 @@ function App() {
         <section className="case-studies section-wrap" id="case-studies">
           <div className="case-heading reveal"><p className="section-kicker">01C / CASE-STUDY PROOF</p><h2>How the work<br /><span>holds up.</span></h2><p className="section-intro">A compact proof layer for the systems behind the headlines. Private-company details stay intentionally scoped until approved for publication.</p></div>
           <div className="case-list reveal delay-1">
-            {caseStudies.map((study) => <article className="case-study" key={study.number}><div className="case-number">{study.number}</div><div className="case-copy"><p className="case-role">{study.role}</p><h3>{study.title}</h3><p className="case-label">ARCHITECTURE</p><p className="case-architecture">{study.architecture}</p><p className="case-label">PROOF</p><p>{study.proof}</p><p className="case-outcome"><strong>Outcome</strong>{study.outcome}</p></div><div className="case-visual" aria-hidden="true"><span>SCREENSHOTS</span><strong>ADD WHEN<br />APPROVED</strong><small>Architecture + UI evidence</small></div></article>)}
+            {caseStudies.map((study) => <article className="case-study" key={study.number}><div className="case-number">{study.number}</div><div className="case-copy"><p className="case-role">{study.role}</p><h3>{study.title}</h3><p className="case-label">ARCHITECTURE</p><p className="case-architecture">{study.architecture}</p><p className="case-label">PROOF</p><p>{study.proof}</p><p className="case-outcome"><strong>Outcome</strong>{study.outcome}</p></div></article>)}
           </div>
         </section>
 
