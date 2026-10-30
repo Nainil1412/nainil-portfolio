@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#141713"/>
+  <path d="M0 530h1200" stroke="#353b32"/>
+  <g opacity=".35" fill="none" stroke="#6f8230">
+    <ellipse cx="890" cy="300" rx="300" ry="120" transform="rotate(-20 890 300)"/>
+    <ellipse cx="890" cy="300" rx="360" ry="150" transform="rotate(25 890 300)" stroke="#647b9f"/>
+  </g>
+  <rect x="760" y="248" width="235" height="100" fill="#c9f24a"/>
+  <text x="790" y="300" fill="#171a16" font-family="monospace" font-size="17" letter-spacing="2">PRODUCT → PLATFORM</text>
+  <text x="72" y="110" fill="#c9f24a" font-family="monospace" font-size="16" letter-spacing="4">NAINIL OZA / PORTFOLIO</text>
+  <text x="72" y="260" fill="#f2f0e8" font-family="Georgia, serif" font-size="74" font-weight="bold">I build the systems</text>
+  <text x="72" y="350" fill="#a8b2a4" font-family="Georgia, serif" font-size="74" font-style="italic">behind the product.</text>
+  <text x="72" y="475" fill="#adb4a8" font-family="monospace" font-size="16" letter-spacing="2">FULL-STACK · CRM · E-COMMERCE · AGENTIC AI</text>
+</svg>

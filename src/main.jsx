@@ -80,6 +80,33 @@ const workflowSteps = [
   ['04', 'Validate and ship', 'Prove the behavior with focused tests, browser checks, and a clean handoff that the next engineer can trust.'],
 ];
 
+const caseStudies = [
+  {
+    number: '01',
+    title: 'Configurable CRM',
+    role: 'Software Developer · eSparkBiz',
+    architecture: 'React → Node.js / Express → PostgreSQL + JSONB / Citus → Elasticsearch · Redis/BullMQ · Socket.IO',
+    proof: 'Dynamic entities, relationship-aware modules, custom fields, filters, views, RBAC, query optimization, real-time updates, and event-driven workflows.',
+    outcome: 'Built to support CRM workflows without hardcoding every schema or interaction.',
+  },
+  {
+    number: '02',
+    title: 'Commerce + financing',
+    role: 'Software Developer · Product delivery',
+    architecture: 'React / TypeScript → Node.js / Express / Prisma → PostgreSQL → Stripe · Apple Pay · DocuSign · AWS S3',
+    proof: 'Connected product browsing, cart, checkout, admin approval, financing payments, signed contracts, webhooks, and document storage.',
+    outcome: 'A complete purchase-to-contract flow across customer and admin portals.',
+  },
+  {
+    number: '03',
+    title: 'PromptForge',
+    role: 'Independent product build',
+    architecture: 'Web app → workflow and capability boundary → agent execution → evaluation and provider integrations',
+    proof: 'Visual workflows, structured capabilities, agent evaluations, provider-aware execution, and AI-assisted engineering with Claude Code and OpenAI Codex.',
+    outcome: 'A focused platform for making agentic workflows clearer to design, test, and operate.',
+  },
+];
+
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [darkMode, setDarkMode] = React.useState(() => window.localStorage.getItem('nainil-theme') === 'dark');
@@ -169,6 +196,13 @@ function App() {
                 <ArrowUpRight className="project-arrow" size={21} />
               </a>
             ))}
+          </div>
+        </section>
+
+        <section className="case-studies section-wrap" id="case-studies">
+          <div className="case-heading reveal"><p className="section-kicker">01C / CASE-STUDY PROOF</p><h2>How the work<br /><span>holds up.</span></h2><p className="section-intro">A compact proof layer for the systems behind the headlines. Private-company details stay intentionally scoped until approved for publication.</p></div>
+          <div className="case-list reveal delay-1">
+            {caseStudies.map((study) => <article className="case-study" key={study.number}><div className="case-number">{study.number}</div><div className="case-copy"><p className="case-role">{study.role}</p><h3>{study.title}</h3><p className="case-label">ARCHITECTURE</p><p className="case-architecture">{study.architecture}</p><p className="case-label">PROOF</p><p>{study.proof}</p><p className="case-outcome"><strong>Outcome</strong>{study.outcome}</p></div><div className="case-visual" aria-hidden="true"><span>SCREENSHOTS</span><strong>ADD WHEN<br />APPROVED</strong><small>Architecture + UI evidence</small></div></article>)}
           </div>
         </section>
 
